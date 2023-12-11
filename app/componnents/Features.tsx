@@ -1,9 +1,11 @@
-import React from 'react'
+import React from "react";
 
 function Features() {
   return (
-    <div>Features</div>
-  )
+    <>
+      <div className="flexCenter flex-col overflow-hidden bg-feature-bg bg-center bg-no-repeat py-24"></div>
+    </>
+  );
 }
 
-export default Features
+export default Features;
