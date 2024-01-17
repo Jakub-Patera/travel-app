@@ -60,22 +60,22 @@ export const CAMP_SLIDER = [
   {
     name: "Yosemite Camp Area",
     place: "Prigen, USA",
-    image: "url('/img-1.png')",
+    image: "/img-1.png",
   },
   {
     name: "Banff Camp Area",
     place: "Alberta, Canada",
-    image: "url('/img-2.png')",
+    image: "/img-2.png",
   },
   {
     name: "Kruger Camp Area",
     place: "Mpumalanga, South Africa",
-    image: "url('/img-3.jpg')",
+    image: "/img-3.jpg",
   },
   {
     name: "Karlův Most Camp Area",
     place: "Praha, Czech Republic",
-    image: "url('/img-4.png')",
+    image: "/img-4.png",
   },
 ];
 

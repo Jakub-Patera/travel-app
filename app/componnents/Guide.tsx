@@ -15,7 +15,7 @@ const Guide = () => {
           <p className="uppercase regular-18 -mt-1 mb-3 text-green-50">
             We are here for yout
           </p>
-          <div className="flex flex-wrap justify-between gap-5">
+          <div className="flex flex-wrap justify-between gap-5 py-5">
             <h2 className="bold-40 lg:bold-64 xl:max-w-[390px]">
               Guid you to Easy Path
             </h2>
