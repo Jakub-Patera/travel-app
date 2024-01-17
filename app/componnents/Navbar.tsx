@@ -27,7 +27,7 @@ const Navbar = () => {
           {MAIN_NAVIGATION.map((link) => (
             // add links here to redrect to the page  when clicked
             <Link
-              href={link.heref}
+              href={link.href}
               key={link.title}
               className='text-gray-50 regular-16 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold'
             >
@@ -70,7 +70,7 @@ const Navbar = () => {
                 {MAIN_NAVIGATION.map((link) => (
                   <Link
                     // add links here to redrect to the page  when clicked
-                    href={link.heref}
+                    href={link.href}
                     key={link.title}
                     onClick={() => setIsOpen(!isOpen)}
                     className='text-gray-50 regular-32 flexCenter cursor-pointer pb-1.5 transition-all hover:font-bold'

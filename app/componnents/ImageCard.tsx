@@ -1,7 +1,7 @@
-import React, { useState, useEffect } from "react";
-import Image from "next/image";
-import { CAMP_SLIDER } from "@/constants";
-import { AnimatePresence, motion } from "framer-motion";
+import { CAMP_SLIDER } from '@/constants';
+import { AnimatePresence, motion } from 'framer-motion';
+import Image from 'next/image';
+import { useEffect, useState } from 'react';
 
 const ImageCard = () => {
   const [currentCampIndex, setCurrentCampIndex] = useState(0);
@@ -15,33 +15,35 @@ const ImageCard = () => {
   }, []);
 
   return (
-    <div className="container relative z-40 flex justify-center">
-      <AnimatePresence>
+    <div className='container relative z-40 flex justify-center bg-cover'>
+      <AnimatePresence mode='wait'>
         <motion.div
           key={currentCampIndex}
-          initial={{ x: "150%", opacity: 0 }}
+          initial={{ x: '150%', opacity: 0 }}
           animate={{ x: 0, opacity: 1 }}
-          exit={{ x: "-100%", opacity: 0 }} // Pouze posun a změna průhlednosti
-          transition={{ duration: 3, ease: "linear" }}
-          className=" min-w-[1280px] min-h-[720px] aspect-video rounded-5xl overflow-hidden relative z-10 "
+          exit={{ x: '-150%', opacity: 0 }} // Pouze posun a změna průhlednosti
+          transition={{ duration: 3, ease: 'easeInOut' }}
+          layout
+          className=' relative z-10 hidden lg:flex mx-24   '
         >
           <Image
             src={CAMP_SLIDER[currentCampIndex].image}
-            alt="Camp Image"
+            alt='Camp Image'
             height={720}
             width={1280}
+            className=' min-w-[900px]  w-full rounded-5xl'
           />
-          <div className="relative z-30 flex justify-start items-center gap-2 top-16 left-16 ">
+          <div className='absolute z-30 gap-2 bottom-10 left-8 '>
             <Image
-              src="/folded-map.svg"
+              src='/folded-map.svg'
               width={60}
               height={60}
-              alt="map-icon"
-              className="bg-green-50 rounded-full p-3"
+              alt='map-icon'
+              className='bg-green-50 rounded-full p-3'
             />
-            <div className="section text-gray-10">
-              <h2 className="bold-18">{CAMP_SLIDER[currentCampIndex].name}</h2>
-              <p className="regular-16">
+            <div className='section text-gray-10'>
+              <h2 className='bold-18'>{CAMP_SLIDER[currentCampIndex].name}</h2>
+              <p className='regular-16'>
                 {CAMP_SLIDER[currentCampIndex].place}
               </p>
             </div>
